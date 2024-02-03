@@ -1,0 +1,27 @@
+.header{
+    height: 10%;
+    border-bottom: 3px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.msgbox{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+.input{
+    height: calc(10% - 7px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+.ChatSpace{
+    width:100%;
+}
