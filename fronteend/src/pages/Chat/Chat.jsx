@@ -32,7 +32,7 @@ function Chat() {
           {selectedGrp === undefined ? (
             <Welcome />
           ) : (
-            <ChatSpace selectedGrp={selectedGrp} />
+            <ChatSpace selectedGrp={selectedGrp} user={user}/>
           )}
     </div>
   );

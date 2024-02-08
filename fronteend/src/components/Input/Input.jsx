@@ -3,20 +3,24 @@ import "./Input.css";
 import axios from "axios";
 import { chat } from "../../utils/APIRoutes";
 
-function Input({currentGrp}) {
+function Input({ currentGrp, user }) {
   const [msg, setMsg] = useState("");
   const sendMsg = async (e) => {
-      e.preventDefault();
-      if (msg === "") return;
-      try {
-      const res = await axios.post(chat, { grp: currentGrp, msg: msg });
+    e.preventDefault();
+    if (msg === "") return;
+    var m = msg;
+    setMsg("");
+    try {
+      const res = await axios.post(chat, {
+        grp: currentGrp,
+        msg: msg,
+        from: user,
+      });
       console.log(res);
-      
     } catch (err) {
       console.log(err);
     }
-      console.log(msg);
-      setMsg("");
+    console.log(msg);
   };
   return (
     <div>
